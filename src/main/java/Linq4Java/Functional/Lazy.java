@@ -1,13 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package Functional;
+package Linq4Java.Functional;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public final class Lazy<T> {
 
@@ -22,7 +17,11 @@ public final class Lazy<T> {
     }
 
     public T getValue() {
-        return isValueCreated ? value : (value = factory.func());
+        if (!isValueCreated) {
+            value = factory.func();
+            isValueCreated = true;
+        }
+        return value;
     }
 
     private final Func0<T> factory;

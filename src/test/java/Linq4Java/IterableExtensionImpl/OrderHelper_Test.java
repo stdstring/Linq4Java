@@ -1,10 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import IterableExtensionHelper.EnumerationAdapter;
+import Linq4Java.IterableExtensionHelper.EnumerationAdapter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,7 +10,7 @@ import org.junit.Test;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 public class OrderHelper_Test {
     @Test public void orderEmptySource() {

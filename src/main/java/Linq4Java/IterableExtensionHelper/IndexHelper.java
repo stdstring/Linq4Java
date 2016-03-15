@@ -1,15 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtensionHelper;
+package Linq4Java.IterableExtensionHelper;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
-// TODO : непонятно нужна ли подобная декомпозиция ?
 public final class IndexHelper {
 
     public int getIndex() {

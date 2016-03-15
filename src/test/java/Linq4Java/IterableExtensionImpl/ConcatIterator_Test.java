@@ -1,12 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Tuple1;
-import IterableHelper.IterableConverter;
+import Linq4Java.IterableHelper.IterableConverter;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;

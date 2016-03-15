@@ -1,11 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionHelper;
+package Linq4Java.IterableExtensionHelper;
 
-import Functional.Func1;
-import Functional.Tuple2;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Tuple2;
 import java.util.Comparator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -59,7 +55,7 @@ public final class ComparatorFactory_Test {
     
     private final Comparator<Integer> keyComparator = new Comparator<Integer>() {
         @Override
-        public int compare(Integer o1, Integer o2) { return o2-o1; }
+        public int compare(Integer o1, Integer o2) { return o2 - o1; }
     };
 
     private class TestItem extends Tuple2<Integer, String> {

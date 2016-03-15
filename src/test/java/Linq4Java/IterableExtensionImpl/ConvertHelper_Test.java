@@ -1,12 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func1;
-import IterableHelper.AssertExtension;
+import Linq4Java.Functional.Func1;
+import Linq4Java.IterableHelper.AssertExtension;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +11,7 @@ import org.junit.Test;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public final class ConvertHelper_Test {
 

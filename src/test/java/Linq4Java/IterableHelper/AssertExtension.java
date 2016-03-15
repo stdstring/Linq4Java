@@ -1,12 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableHelper;
 
-package IterableHelper;
-
-import Functional.Action0;
-import IterableExtension.Grouping;
+import Linq4Java.Functional.Action0;
+import Linq4Java.IterableExtension.Grouping;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -14,11 +9,10 @@ import org.junit.Assert;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 public final class AssertExtension {
 
-    // TODO : сделать сообщения более информативными
     public static <TException extends Throwable> void assertThrows(Action0 action, Class<TException> exceptionClass) {
         try {
             action.action();
@@ -58,7 +52,6 @@ public final class AssertExtension {
         }
     }
 
-    // TODO : сделать сообщения более информативными
     public static <TKey, TElement> void assertMapEquals(Map<TKey, TElement> expected, Map<TKey, TElement> actual) {
         Assert.assertEquals(expected.size(), actual.size());
         for(TKey key : expected.keySet()) {

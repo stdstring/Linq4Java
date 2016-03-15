@@ -1,22 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.EqualsHelper;
-import Functional.Func1;
-import Functional.Func2;
-import Functional.FuncsCastAdapter;
-import Functional.Tuple2;
+import Linq4Java.Functional.EqualsHelper;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Func2;
+import Linq4Java.Functional.FuncsCastAdapter;
+import Linq4Java.Functional.Tuple2;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Iterator;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 final class AggregateHelper {
 

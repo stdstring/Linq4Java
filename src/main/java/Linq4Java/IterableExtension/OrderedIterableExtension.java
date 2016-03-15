@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtension;
 
-package IterableExtension;
-
-import Functional.Func1;
+import Linq4Java.Functional.Func1;
 import java.util.Comparator;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public interface OrderedIterableExtension<TSource> extends IterableExtension<TSource>, OrderedIterable<TSource> {
     // thenBy ...

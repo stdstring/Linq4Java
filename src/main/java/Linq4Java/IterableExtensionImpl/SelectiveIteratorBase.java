@@ -1,19 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func2;
-import IterableExtensionHelper.IndexHelper;
+import Linq4Java.Functional.Func2;
+import Linq4Java.IterableExtensionHelper.IndexHelper;
 import java.util.Iterator;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
-// TODO : это итератор с предвыборкой одного элемента и последующей по нему фильтрацией. может переименовать ???
 class SelectiveIteratorBase<TSource> extends IteratorBase<TSource> {
 
     public SelectiveIteratorBase(Iterator<TSource> iterator, Func2<TSource, Integer, Boolean> predicate) {

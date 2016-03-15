@@ -1,14 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Action0;
-import Functional.Func1;
-import Functional.FuncsAdapter;
-import IterableHelper.AssertExtension;
+import Linq4Java.Functional.Action0;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.FuncsAdapter;
+import Linq4Java.IterableHelper.AssertExtension;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,7 +13,7 @@ import org.junit.Test;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 public class SelectiveIteratorBase_Test {
 

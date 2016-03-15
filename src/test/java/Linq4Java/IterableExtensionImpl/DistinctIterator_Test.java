@@ -1,11 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import IterableHelper.IterableConverter;
+import Linq4Java.IterableHelper.IterableConverter;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
@@ -13,7 +8,7 @@ import org.junit.Test;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 public final class DistinctIterator_Test {
 

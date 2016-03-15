@@ -1,20 +1,15 @@
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import IterableExtensionHelper.SetOperationFuncs;
-import IterableHelper.IterableConverter;
+import Linq4Java.IterableExtensionHelper.SetOperationFuncs;
+import Linq4Java.IterableHelper.IterableConverter;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author avu
+ * @author std_string
  */
 public final class SetOperationIterable_Test {
 

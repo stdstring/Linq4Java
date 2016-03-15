@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package Functional;
+package Linq4Java.Functional;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public final class Tuple3_Test {
 

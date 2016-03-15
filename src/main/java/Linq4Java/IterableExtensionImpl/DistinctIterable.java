@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
 import java.util.Iterator;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 final class DistinctIterable<TSource> implements Iterable<TSource> {
 

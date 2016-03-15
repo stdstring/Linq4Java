@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func0;
+import Linq4Java.Functional.Func0;
 import java.util.Iterator;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 final class SimpleIterableImpl<TSource> implements Iterable<TSource> {
 

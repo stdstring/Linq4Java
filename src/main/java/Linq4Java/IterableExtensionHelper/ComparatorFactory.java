@@ -1,10 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionHelper;
+package Linq4Java.IterableExtensionHelper;
 
-import Functional.Func1;
+import Linq4Java.Functional.Func1;
 import java.util.Comparator;
 
 /**
@@ -20,7 +16,7 @@ public class ComparatorFactory {
                 if(o1 == null && o2 == null) return 0;
                 if(o1 == null && o2 != null) return -compareSign;
                 if(o1 != null && o2 == null) return compareSign;
-                return compareSign*o1.compareTo(o2);
+                return compareSign * o1.compareTo(o2);
             }            
         };
     }

@@ -1,17 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import IterableHelper.IterableConverter;
+import Linq4Java.IterableHelper.IterableConverter;
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 public class IterableUtils_Test {
 

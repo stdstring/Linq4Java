@@ -1,13 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import Functional.Func1;
-import IterableExtension.OrderedIterable;
-import IterableExtensionHelper.ComparatorFactory;
-import IterableExtensionHelper.EnumerationAdapter;
+import Linq4Java.Functional.Func1;
+import Linq4Java.IterableExtension.OrderedIterable;
+import Linq4Java.IterableExtensionHelper.ComparatorFactory;
+import Linq4Java.IterableExtensionHelper.EnumerationAdapter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +12,7 @@ import org.junit.Test;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public class OrderedIterableImpl_Test {
     

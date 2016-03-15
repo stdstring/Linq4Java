@@ -1,16 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func0;
-import Functional.Func1;
-import Functional.Tuple2;
-import IterableExtension.Grouping;
-import IterableExtensionHelper.TrivialFuncs;
-import IterableHelper.AssertExtension;
+import Linq4Java.Functional.Func0;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Tuple2;
+import Linq4Java.IterableExtension.Grouping;
+import Linq4Java.IterableExtensionHelper.TrivialFuncs;
+import Linq4Java.IterableHelper.AssertExtension;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -21,7 +16,7 @@ import org.junit.Test;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public final class GroupJoinIterator_Test {
 

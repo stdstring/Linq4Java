@@ -1,14 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func1;
-import IterableExtension.Grouping;
-import IterableExtensionHelper.TrivialFuncs;
-import IterableHelper.GroupingConverter;
+import Linq4Java.Functional.Func1;
+import Linq4Java.IterableExtension.Grouping;
+import Linq4Java.IterableExtensionHelper.TrivialFuncs;
+import Linq4Java.IterableHelper.GroupingConverter;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
@@ -16,7 +11,7 @@ import org.junit.Test;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public class GroupHelper_Test {
 

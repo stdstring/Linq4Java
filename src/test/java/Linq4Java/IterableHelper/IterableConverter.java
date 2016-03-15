@@ -1,9 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableHelper;
+package Linq4Java.IterableHelper;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -11,7 +6,7 @@ import java.util.List;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 public final class IterableConverter {
     public static <TItem> TItem[] toArray(Iterable<TItem> iterable, Class<TItem> itemType) {

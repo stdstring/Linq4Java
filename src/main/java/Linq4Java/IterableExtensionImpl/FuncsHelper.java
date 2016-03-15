@@ -1,21 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func2;
-import Functional.Tuple2;
-import IterableExtension.Grouping;
+import Linq4Java.Functional.Func2;
+import Linq4Java.Functional.Tuple2;
+import Linq4Java.IterableExtension.Grouping;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 final class FuncsHelper {
     
-    // Р°РґР°РїС‚РµСЂ РґР»СЏ РѕР±СЉРµРґРёРЅРµРЅРёСЏ РІ РЅР°Р±РѕСЂРµ РёСЃС…РѕРґРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° Рё СЌР»РµРјРµРЅС‚Р° РЅР°Р±РѕСЂР°
+    // адаптер для объединения в наборе исходного элемента и элемента набора
     static <TSource, TCollection> Func2<TSource, Integer, Iterable<Tuple2<TSource, TCollection>>> unitingAdapter(final Func2<TSource, Integer, Iterable<TCollection>> collectionSelector) {
         return new Func2<TSource, Integer, Iterable<Tuple2<TSource, TCollection>>>() {
             @Override
@@ -26,7 +21,7 @@ final class FuncsHelper {
         };
     }
 
-    // Р°РґР°РїС‚РµСЂ РґР»СЏ СЂР°Р·СЉРµРґРёРЅРµРЅРёСЏ РїР°СЂС‹ СЌР»РµРјРµРЅС‚РѕРІ Рё РїРѕР»СѓС‡РµРЅРёСЏ РїСЂРё РїРѕРјРѕС‰Рё РЅРёС… СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°
+    /// адаптер для разъединения пары элементов и получения при помощи них результирующего элемента
     static <TSource, TCollection, TResult> Func2<Tuple2<TSource, TCollection>, Integer, TResult> disjunctiveAdapter(final Func2<TSource, TCollection, TResult> resultSelector) {
         return new Func2<Tuple2<TSource, TCollection>, Integer, TResult>() {
             @Override
@@ -45,7 +40,7 @@ final class FuncsHelper {
         };
     }
 
-    // РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ С„СѓРЅРєС‚РѕСЂ РґР»СЏ РѕР±СЉРµРґРёРЅРµРЅРёСЏ РёСЃС…РѕРґРЅРѕРіРѕ Рё СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚РѕРІ
+    // вспомогательный функтор для объединения исходного и результирующего элементов
     private static <TResult, TSource> Func2<TResult, Integer, Tuple2<TSource, TResult>> getUnitingFunc(final TSource sourceItem) {
         return new Func2<TResult, Integer, Tuple2<TSource, TResult>>() {
             @Override

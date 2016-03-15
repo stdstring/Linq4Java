@@ -1,12 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import Functional.Func0;
-import Functional.Func1;
-import IterableExtension.Grouping;
+import Linq4Java.Functional.Func0;
+import Linq4Java.Functional.Func1;
+import Linq4Java.IterableExtension.Grouping;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -16,9 +12,8 @@ import java.util.Map;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
-
 final class GroupHelper {
 
     public static <TSource, TKey, TResult> Iterable<Grouping<TKey, TResult>> createGroupIterable(final Iterable<TSource> sourceIterable, final Func1<TSource, TKey> keySelector, final Func1<TSource, TResult> elementSelector) {
@@ -42,7 +37,7 @@ final class GroupHelper {
         for(TSource item : source) {
             TKey key = keySelector.func(item);
             TResult result = elementSelector.func(item);
-            Collection<TResult> group = null;
+            Collection<TResult> group;
             if(keyMap.containsKey(key)) {
                 group = keyMap.get(key);
             }
@@ -62,7 +57,7 @@ final class GroupHelper {
         for(TSource item : source) {
             TKey key = keySelector.func(item);
             TResult result = elementSelector.func(item);
-            Collection<TResult> group = null;
+            Collection<TResult> group;
             if(keyMap.containsKey(key)) {
                 group = keyMap.get(key);
             }

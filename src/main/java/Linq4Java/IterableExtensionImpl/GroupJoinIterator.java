@@ -1,19 +1,14 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Tuple2;
-import IterableExtension.Grouping;
+import Linq4Java.Functional.Tuple2;
+import Linq4Java.IterableExtension.Grouping;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 final class GroupJoinIterator<TSource, TInner, TKey> extends IteratorBase<Tuple2<TSource, Iterable<TInner>>> {
 

@@ -1,20 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func0;
-import Functional.Func2;
-import IterableExtension.IterableExtension;
+import Linq4Java.Functional.Func0;
+import Linq4Java.Functional.Func2;
+import Linq4Java.IterableExtension.IterableExtension;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 public class IterableUtils {
 

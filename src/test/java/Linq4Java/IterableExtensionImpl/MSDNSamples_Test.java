@@ -1,26 +1,21 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
 import java.util.HashMap;
 import java.util.Map;
-import Functional.Action0;
-import Functional.EqualsHelper;
+import Linq4Java.Functional.Action0;
+import Linq4Java.Functional.EqualsHelper;
 import java.util.ArrayList;
 import java.lang.reflect.Array;
-import Functional.Tuple4;
-import Functional.Func1;
-import Functional.Func2;
-import Functional.HashCodeHelper;
-import Functional.Tuple2;
-import IterableExtension.IterableExtension;
-import IterableExtensionHelper.TrivialFuncs;
-import IterableHelper.IterableConverter;
-import IterableExtension.Grouping;
-import IterableHelper.AssertExtension;
+import Linq4Java.Functional.Tuple4;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Func2;
+import Linq4Java.Functional.HashCodeHelper;
+import Linq4Java.Functional.Tuple2;
+import Linq4Java.IterableExtension.IterableExtension;
+import Linq4Java.IterableExtensionHelper.TrivialFuncs;
+import Linq4Java.IterableHelper.IterableConverter;
+import Linq4Java.IterableExtension.Grouping;
+import Linq4Java.IterableHelper.AssertExtension;
 import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.Arrays;
@@ -29,11 +24,11 @@ import java.util.Collections;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static IterableExtensionImpl.IterableUtils.createQuery;
+import static Linq4Java.IterableExtensionImpl.IterableUtils.createQuery;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public final class MSDNSamples_Test {
     

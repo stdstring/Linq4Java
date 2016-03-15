@@ -1,18 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableHelper;
 
-package IterableHelper;
-
-import IterableExtension.Grouping;
+import Linq4Java.IterableExtension.Grouping;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public final class GroupingConverter {
 

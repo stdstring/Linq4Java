@@ -1,14 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import IterableExtension.OrderedIterable;
+import Linq4Java.IterableExtension.OrderedIterable;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 final class OrderedIterableExtensionImplSelector {
     

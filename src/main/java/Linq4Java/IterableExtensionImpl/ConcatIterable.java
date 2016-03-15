@@ -1,9 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
 import java.util.Iterator;
 
@@ -11,7 +6,6 @@ import java.util.Iterator;
  *
  * @author std_string
  */
-
 final class ConcatIterable<TSource> implements Iterable<TSource> {
 
     public ConcatIterable(Iterable<Iterable<TSource>> iterables) {

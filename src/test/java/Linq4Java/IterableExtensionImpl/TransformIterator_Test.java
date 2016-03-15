@@ -1,14 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func1;
-import Functional.Func2;
-import Functional.FuncsAdapter;
-import IterableHelper.IterableConverter;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Func2;
+import Linq4Java.Functional.FuncsAdapter;
+import Linq4Java.IterableHelper.IterableConverter;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;

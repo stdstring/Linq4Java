@@ -1,18 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionHelper;
 
-package IterableExtensionHelper;
-
-import Functional.Func2;
+import Linq4Java.Functional.Func2;
 import java.util.Set;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
-
 public final class SetOperationFuncs {
     
     public static <TSource> Func2<TSource, Set<TSource>, Boolean> getExceptOp() {

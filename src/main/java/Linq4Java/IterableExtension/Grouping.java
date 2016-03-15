@@ -1,13 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtension;
+package Linq4Java.IterableExtension;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 public interface Grouping<TKey, TElement> extends Iterable<TElement> {
     TKey getKey();

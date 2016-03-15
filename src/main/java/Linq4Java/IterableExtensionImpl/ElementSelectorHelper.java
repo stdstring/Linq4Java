@@ -1,11 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import Functional.Func1;
-import Functional.Tuple2;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Tuple2;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
@@ -13,7 +9,7 @@ import java.util.ListIterator;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 public class ElementSelectorHelper {
     

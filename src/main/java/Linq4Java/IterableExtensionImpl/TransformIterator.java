@@ -1,13 +1,8 @@
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import Functional.Func2;
-import IterableExtensionHelper.IndexHelper;
+import Linq4Java.Functional.Func2;
+import Linq4Java.IterableExtensionHelper.IndexHelper;
 import java.util.Iterator;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *

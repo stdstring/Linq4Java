@@ -1,9 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
 import java.util.Iterator;
 
@@ -11,7 +6,6 @@ import java.util.Iterator;
  *
  * @author std_string
  */
-
 final class ConcatIterator<TSource> implements Iterator<TSource> {
 
     public ConcatIterator(Iterator<Iterable<TSource>> iterators) {
@@ -21,8 +15,8 @@ final class ConcatIterator<TSource> implements Iterator<TSource> {
 
     @Override
     public boolean hasNext() {
-        // РёС‰РµРј РїРµСЂРІС‹Р№ РёС‚РµСЂР°С‚РѕСЂ (СЃРЅР°С‡Р°Р»Рѕ С‚РµРєСѓС‰РёР№, РїРѕС‚РѕРј РІ РЅР°Р±РѕСЂРµ), Сѓ РєРѕС‚РѕСЂРѕРіРѕ РµСЃС‚СЊ СЌР»РµРјРµРЅС‚С‹
-        // РµСЃР»Рё РјС‹ РґРѕСЃС‚РёРіРЅРµРј РєРѕРЅС†Р° РЅР°Р±РѕСЂР° РёС‚РµСЂР°С‚РѕСЂРѕРІ, С‚Рѕ С‚Р°РєРѕРіРѕ РёС‚РµСЂР°С‚РѕСЂР° РЅРµС‚ Рё Р·РЅР°С‡РёС‚ СЃР»РµРґСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РЅРµС‚
+        // ищем первый итератор (сначало текущий, потом в наборе), у которого есть элементы
+        // если мы достигнем конца набора итераторов, то такого итератора нет и значит следующего элемента нет
         while(currentIterator == null || !currentIterator.hasNext()) {
             if(iterators.hasNext()) {
                 currentIterator = iterators.next().iterator();
@@ -36,8 +30,8 @@ final class ConcatIterator<TSource> implements Iterator<TSource> {
 
     @Override
     public TSource next() {
-        // РёС‰РµРј РїРµСЂРІС‹Р№ РёС‚РµСЂР°С‚РѕСЂ (СЃРЅР°С‡Р°Р»Рѕ С‚РµРєСѓС‰РёР№, РїРѕС‚РѕРј РІ РЅР°Р±РѕСЂРµ), Сѓ РєРѕС‚РѕСЂРѕРіРѕ РµСЃС‚СЊ СЌР»РµРјРµРЅС‚С‹
-        // РµСЃР»Рё РјС‹ РґРѕСЃС‚РёРіРЅРµРј РєРѕРЅС†Р° РЅР°Р±РѕСЂР° РёС‚РµСЂР°С‚РѕСЂРѕРІ, С‚Рѕ СѓРїР°РґРµРј СЃ РёСЃРєР»СЋС‡РµРЅРёРµРј NoSuchElementException, РєР°Рє Рё РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ
+        // ищем первый итератор (сначало текущий, потом в наборе), у которого есть элементы
+        // если мы достигнем конца набора итераторов, то упадем с исключением NoSuchElementException, как и должно быть
         while(currentIterator == null || !currentIterator.hasNext()) {
             currentIterator = iterators.next().iterator();
         }

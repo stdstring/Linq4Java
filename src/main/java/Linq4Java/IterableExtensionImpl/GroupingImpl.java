@@ -1,17 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import IterableExtension.Grouping;
+import Linq4Java.IterableExtension.Grouping;
 import java.util.Collection;
 import java.util.Iterator;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 final class GroupingImpl<TKey, TElement> implements Grouping<TKey, TElement> {
 

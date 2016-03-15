@@ -1,18 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func0;
+import Linq4Java.Functional.Func0;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 /**
  *
- * @author A.Ushakov
+ * @author std_string
  */
 final class ReverseHelper {
 

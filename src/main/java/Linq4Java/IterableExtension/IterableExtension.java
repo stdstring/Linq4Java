@@ -1,16 +1,10 @@
-package IterableExtension;
+package Linq4Java.IterableExtension;
 
-
-import Functional.Func1;
-import Functional.Func2;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Func2;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *

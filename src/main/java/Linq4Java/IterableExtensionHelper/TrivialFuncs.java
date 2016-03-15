@@ -1,17 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionHelper;
 
-package IterableExtensionHelper;
-
-import Functional.Func1;
+import Linq4Java.Functional.Func1;
 
 /**
  *
  * @author std_string
  */
-
 public final class TrivialFuncs {
 
     public static <TSource> Func1<TSource, Boolean> getTrivialPredicate() {

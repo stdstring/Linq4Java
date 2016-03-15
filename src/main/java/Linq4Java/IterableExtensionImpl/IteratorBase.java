@@ -1,19 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
-
-// TODO : это итератор с предвыборкой одного элемента. может переименовать ???
 abstract class IteratorBase<TSource> implements Iterator<TSource> {
 
     public IteratorBase() {
@@ -25,7 +18,7 @@ abstract class IteratorBase<TSource> implements Iterator<TSource> {
     public final boolean hasNext() {
         if(getState().equals(IteratorState.ACTIVE)) return true;
         if(getState().equals(IteratorState.FINISHED)) return false;
-        // пытаемся найти следующий (удовлетворяющий критериям) элемент
+        // �������� ����� ��������� (��������������� ���������) �������
         boolean hasNext = tryGetNextValue();
         setState(hasNext ? IteratorState.ACTIVE : IteratorState.FINISHED);
         return hasNext;

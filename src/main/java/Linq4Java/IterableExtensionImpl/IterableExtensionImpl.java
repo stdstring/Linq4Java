@@ -1,22 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+package Linq4Java.IterableExtensionImpl;
 
-package IterableExtensionImpl;
-
-import Functional.Func0;
-import Functional.Func1;
-import Functional.Func2;
-import Functional.FuncsAdapter;
-import Functional.Tuple2;
-import IterableExtension.Grouping;
-import IterableExtension.IterableExtension;
-import IterableExtension.OrderedIterableExtension;
-import IterableExtensionHelper.ComparatorFactory;
-import IterableExtensionHelper.DefaultValueFactory;
-import IterableExtensionHelper.SetOperationFuncs;
-import IterableExtensionHelper.TrivialFuncs;
+import Linq4Java.Functional.Func0;
+import Linq4Java.Functional.Func1;
+import Linq4Java.Functional.Func2;
+import Linq4Java.Functional.FuncsAdapter;
+import Linq4Java.Functional.Tuple2;
+import Linq4Java.IterableExtension.Grouping;
+import Linq4Java.IterableExtension.IterableExtension;
+import Linq4Java.IterableExtension.OrderedIterableExtension;
+import Linq4Java.IterableExtensionHelper.ComparatorFactory;
+import Linq4Java.IterableExtensionHelper.DefaultValueFactory;
+import Linq4Java.IterableExtensionHelper.SetOperationFuncs;
+import Linq4Java.IterableExtensionHelper.TrivialFuncs;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
@@ -26,7 +21,7 @@ import java.util.Map;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 class IterableExtensionImpl<TSource> implements IterableExtension<TSource> {
 
@@ -187,7 +182,6 @@ class IterableExtensionImpl<TSource> implements IterableExtension<TSource> {
     }
 
     // groupJoin
-    // TODO : may be create && use some helper
     @Override
     public <TInner, TKey, TResult> IterableExtension<TResult> groupJoin(final Iterable<TInner> inner, final Func1<TSource, TKey> outerKeySelector, final Func1<TInner, TKey> innerKeySelector, Func2<TSource, Iterable<TInner>, TResult> resultSelector) {
         Func0<Iterator<Tuple2<TSource, Iterable<TInner>>>> factory = new Func0<Iterator<Tuple2<TSource, Iterable<TInner>>>>() {
@@ -209,7 +203,6 @@ class IterableExtensionImpl<TSource> implements IterableExtension<TSource> {
     }
 
     // join
-    // TODO : may be create && use some helper
     @Override
     public <TInner, TKey, TResult> IterableExtension<TResult> join(final Iterable<TInner> inner, final Func1<TSource, TKey> outerKeySelector, final Func1<TInner, TKey> innerKeySelector, Func2<TSource, TInner, TResult> resultSelector) {
         Func0<Iterator<Tuple2<TSource, TInner>>> factory = new Func0<Iterator<Tuple2<TSource, TInner>>>() {
@@ -332,28 +325,24 @@ class IterableExtensionImpl<TSource> implements IterableExtension<TSource> {
     }
 
     // selectMany
-    // TODO : может для selectMany выделить какой-нибудь Helper ???
     @Override
     public <TResult> IterableExtension<TResult> selectMany(Func1<TSource, Iterable<TResult>> selector) {
         Iterable<TResult> result = selectMany(FuncsAdapter.<TSource, Integer, Iterable<TResult>>fakeParam2(selector));
         return new IterableExtensionImpl(result);
     }
 
-    // TODO : может для selectMany выделить какой-нибудь Helper ???
     @Override
     public <TResult> IterableExtension<TResult> selectMany(Func2<TSource, Integer, Iterable<TResult>> selector) {
         Iterable<TResult> result = new ConcatIterable(new TransformIterable<TSource, Iterable<TResult>>(iterable, selector));
         return new IterableExtensionImpl(result);
     }
 
-    // TODO : может для selectMany выделить какой-нибудь Helper ???
     @Override
     public <TCollection, TResult> IterableExtension<TResult> selectMany(Func1<TSource, Iterable<TCollection>> collectionSelector, Func2<TSource, TCollection, TResult> resultSelector) {
         Iterable<TResult> result = selectMany(FuncsAdapter.<TSource, Integer, Iterable<TCollection>>fakeParam2(collectionSelector), resultSelector);
         return new IterableExtensionImpl(result);
     }
 
-    // TODO : может для selectMany выделить какой-нибудь Helper ???
     @Override
     public <TCollection, TResult> IterableExtension<TResult> selectMany(Func2<TSource, Integer, Iterable<TCollection>> collectionSelector, Func2<TSource, TCollection, TResult> resultSelector) {
         Iterable<Tuple2<TSource, TCollection>> intermediateIterable = selectMany(FuncsHelper.unitingAdapter(collectionSelector));

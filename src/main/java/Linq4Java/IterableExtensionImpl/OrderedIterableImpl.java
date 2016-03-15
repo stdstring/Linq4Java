@@ -1,13 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import Functional.Func0;
-import Functional.Func1;
-import IterableExtension.OrderedIterable;
-import IterableExtensionHelper.ComparatorFactory;
+import Linq4Java.Functional.Func0;
+import Linq4Java.Functional.Func1;
+import Linq4Java.IterableExtension.OrderedIterable;
+import Linq4Java.IterableExtensionHelper.ComparatorFactory;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -15,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author aushakov
+ * @author std_string
  */
 class OrderedIterableImpl<TSource> implements OrderedIterable<TSource> {
 

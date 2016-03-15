@@ -1,17 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package IterableExtensionImpl;
+package Linq4Java.IterableExtensionImpl;
 
-import Functional.Func2;
+import Linq4Java.Functional.Func2;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 /**
  *
- * @author avu
+ * @author std_string
  */
 final class SetOperationIterator<TSource> extends SelectiveIteratorBase<TSource> {
 
