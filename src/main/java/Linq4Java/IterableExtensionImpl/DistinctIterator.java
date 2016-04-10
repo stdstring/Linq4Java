@@ -22,7 +22,7 @@ final class DistinctIterator<TSource> extends SelectiveIteratorBase<TSource> {
                         }
                         return notContains;
                     }
-                    private Set<TSource> knownObjects = new HashSet<TSource>();
+                    private final Set<TSource> knownObjects = new HashSet<TSource>();
                 });
     }
 }

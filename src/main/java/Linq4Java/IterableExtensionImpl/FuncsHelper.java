@@ -10,7 +10,6 @@ import Linq4Java.IterableExtension.Grouping;
  */
 final class FuncsHelper {
     
-    // адаптер для объединения в наборе исходного элемента и элемента набора
     static <TSource, TCollection> Func2<TSource, Integer, Iterable<Tuple2<TSource, TCollection>>> unitingAdapter(final Func2<TSource, Integer, Iterable<TCollection>> collectionSelector) {
         return new Func2<TSource, Integer, Iterable<Tuple2<TSource, TCollection>>>() {
             @Override
@@ -21,7 +20,6 @@ final class FuncsHelper {
         };
     }
 
-    /// адаптер для разъединения пары элементов и получения при помощи них результирующего элемента
     static <TSource, TCollection, TResult> Func2<Tuple2<TSource, TCollection>, Integer, TResult> disjunctiveAdapter(final Func2<TSource, TCollection, TResult> resultSelector) {
         return new Func2<Tuple2<TSource, TCollection>, Integer, TResult>() {
             @Override
@@ -40,7 +38,6 @@ final class FuncsHelper {
         };
     }
 
-    // вспомогательный функтор для объединения исходного и результирующего элементов
     private static <TResult, TSource> Func2<TResult, Integer, Tuple2<TSource, TResult>> getUnitingFunc(final TSource sourceItem) {
         return new Func2<TResult, Integer, Tuple2<TSource, TResult>>() {
             @Override

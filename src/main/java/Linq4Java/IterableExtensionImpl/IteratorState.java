@@ -5,10 +5,10 @@ package Linq4Java.IterableExtensionImpl;
  * @author std_string
  */
 enum IteratorState {
-    // итератор находится в неизвесном состоянии (сразу после выборки очередного элемента)
+    // iterator in unknown state (after obtaining next element)
     UNKNOWN,
-    // итератор находится в активном состоянии (очередной элемент есть)
+    // iterator in active state (next element exists)
     ACTIVE,
-    // итератор находится в конечном состоянии (очередного элемента нет)
+    // iterator in final state (next element doesn't exist)
     FINISHED
 }

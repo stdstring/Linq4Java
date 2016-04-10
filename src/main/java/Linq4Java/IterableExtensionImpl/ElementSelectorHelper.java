@@ -134,8 +134,7 @@ public class ElementSelectorHelper {
     }
     
     private static <TSource> Tuple2<Boolean, TSource> getFirst(Iterable<TSource> source, Func1<TSource, Boolean> predicate) {
-        for(Iterator<TSource> iterator = source.iterator(); iterator.hasNext(); ) {
-            TSource current = iterator.next();
+        for (TSource current : source) {
             if(predicate.func(current))
                 return new Tuple2<Boolean, TSource>(true, current);
         }
@@ -145,8 +144,7 @@ public class ElementSelectorHelper {
     private static <TSource> Tuple2<Boolean, TSource> getLast(Iterable<TSource> source, Func1<TSource, Boolean> predicate) {
         boolean find = false;
         TSource element = null;
-        for(Iterator<TSource> iterator = source.iterator(); iterator.hasNext(); ) {
-            TSource current = iterator.next();
+        for (TSource current : source) {
             if(predicate.func(current)) {
                 find = true;
                 element = current;

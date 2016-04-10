@@ -15,8 +15,6 @@ final class ConcatIterator<TSource> implements Iterator<TSource> {
 
     @Override
     public boolean hasNext() {
-        // ищем первый итератор (сначало текущий, потом в наборе), у которого есть элементы
-        // если мы достигнем конца набора итераторов, то такого итератора нет и значит следующего элемента нет
         while(currentIterator == null || !currentIterator.hasNext()) {
             if(iterators.hasNext()) {
                 currentIterator = iterators.next().iterator();
@@ -30,8 +28,6 @@ final class ConcatIterator<TSource> implements Iterator<TSource> {
 
     @Override
     public TSource next() {
-        // ищем первый итератор (сначало текущий, потом в наборе), у которого есть элементы
-        // если мы достигнем конца набора итераторов, то упадем с исключением NoSuchElementException, как и должно быть
         while(currentIterator == null || !currentIterator.hasNext()) {
             currentIterator = iterators.next().iterator();
         }
